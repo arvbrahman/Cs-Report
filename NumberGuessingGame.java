@@ -5,7 +5,7 @@ public class NumberGuessingGame {
 
     // Main method to run the game
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         Random random = new Random();
 
         // Generate a random number between 1 and 100
@@ -21,7 +21,7 @@ public class NumberGuessingGame {
         // Loop until the player guesses the correct number
         while (!hasWon) {
             System.out.print("Enter your guess: ");
-            guess = scanner.nextInt();
+            guess = sc.nextInt();
             numberOfTries++;
 
             // Check if the guess is correct
@@ -38,7 +38,7 @@ public class NumberGuessingGame {
         System.out.println("Congratulations!!!! You've guessed the correct number: " + numberToGuess);
         System.out.println("It took you " + numberOfTries + " tries.");
         
-        scanner.close();
+        sc.close();
     }
 }
 
